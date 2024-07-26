@@ -18,7 +18,25 @@ I also do a little design and I built an arduino claw machine once but I feel li
 A Continual Learner
 Open-minded and teachable, I strive to learn and apply new concepts everyday.
 A Strategy Game Enthusiest
-Perhaps my most important characteristic -- Age of Empires II and Risk are some of my favorites.
+Perhaps my most important characteristic -- RTS games are some of my favorites.
 
-Call to Action
-View My Work | Get in Touch (if you want to play strategy games together)
+Skills
+Problem solving
+Data Manipulation
+Database Administration
+Embedded Systems
+Web Development
+Leadership
+Communication
+Critical Thinking
+
+Interested in How I've Used These Skills?
+Check out my projects!
+
+Get in Touch
+If you want to play Age of Empires! We could play and code mods together.
+Contact Me
+
+Footer
+Noah's Nook
+Copyright Noah Ewell
