@@ -4,6 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noah's Nook</title>
+    <link rel="icon" href="./assets/upper-left-corner.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="./css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,65 +18,80 @@
   <body>
   <!--Navbar-->
   <section id="navbar">
-    <div class="container">
-      <header class="d-flex flex-wrap justify-content-center py-3">
+    <nav class="navbar navbar-expand-lg" aria-label="navigation bar">
+      <div class="container">
         <img class="my-logo" src="./assets/upper-left-corner.svg" alt="corner logo">
-        <a href="/" class="d-flex flex-column justify-content-center px-3 mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none dm-serif-display-regular">
+        <a href="/" class="navbar-brand d-flex flex-column px-3 mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none dm-serif-display-regular">
           <span class="fs-4 dm-serif-display-regular">Noah's Nook</span>
           <span class="dm-sans-serif">My own little corner of the internet</span>
         </a>
-  
-        <ul class="nav nav-underline py-3 dm-sans-serif">
-          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">About</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Resume</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Leadership</a></li>
-        </ul>
-      </header>
-    </div>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 dm-sans-serif">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Resume</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Community Engagement</a></li>
+                <li><a class="dropdown-item" href="#">Academic Portfolio</a></li>
+                <li><a class="dropdown-item" href="#">Contact Me</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </section>
   <!--Title-->
   <section id="title">
-    <div class="mb-5 dm-sans-serif">
-      <div class="p-5 text-center bg-body-tertiary">
-        <div class="container py-5">
-          <img class="portrait mb-4" height="350" src="./assets/images/portrait.jpg" alt="Noah">
-          <h1 class="text-body-emphasis display-6 fw-bold">Hi, I'm Noah</h1>
-          <p class="col-lg-8 mx-auto lead large-body">
-            a <span class="pro">pro</span>grammer
-          </p>
-        </div>
+    <div class="dm-sans-serif">
+      <div class="py-5 text-center bg-body-tertiary">
+        <img class="portrait mb-4" height="350" src="./assets/images/portrait.jpg" alt="Noah">
+        <h1 class="text-body-emphasis display-6 fw-bold">Hi, I'm Noah</h1>
+        <p class="col-lg-8 mx-auto lead large-body">
+          a <span class="pro">pro</span>grammer
+        </p>
       </div>
     </div>
+  </section>
   <!--About Me-->
   <section id="about-me">
-    <div class="container col-xxl-8 px-4 py-3 dm-sans-serif">
-      <h2 class="pb-2 border-bottom mb-3">About Me</h2>
-      <div class="row align-items-center g-5 my-3">
+    <div class="container col-xxl-8 px-4 pt-5 dm-sans-serif">
+      <h2 class="pb-2 border-bottom mb-3">I'm Also</h2>
+      <div class="row align-items-center mt-5">
         <div class="col-10 col-sm-8 col-lg-6">
           <img src="./assets/images/cat-typing.gif" class="d-block mx-lg-auto img-fluid about-pic" alt="cat typing" loading="lazy">
         </div>
         <div class="col-lg-6">
-          <h3 class="text-body-emphasis 1h-1 mb-3">A Software Engineer</h3>
+          <h3 class="text-body-emphasis 1h-1 py-3">A Software Engineer</h3>
           <p class="lead">I also do a little design and I built an arduino claw machine once but I feel like I talk about that too much... Did you want to see it? </p>
         </div>
       </div>
-      <div class="row align-items-center g-5 my-3">
+      <div class="row align-items-center my-5">
         <div class="col-10 col-sm-8 col-lg-6">
           <img src="./assets/images/thinking-man.gif" class="d-block mx-lg-auto img-fluid about-pic" alt="thinking man" width="250" loading="lazy">
         </div>
         <div class="col-lg-6">
-          <h3 class="text-body-emphasis 1h-1 mb-3">A Continual Learner</h3>
+          <h3 class="text-body-emphasis 1h-1 mb-3 py-3">A Continual Learner</h3>
           <p class="lead">Open-minded and teachable, I strive to learn and apply new concepts everyday.</p>
         </div>
       </div>
-      <div class="row align-items-center g-5 my-3">
+      <div class="row align-items-center">
         <div class="col-10 col-sm-8 col-lg-6">
           <img src="./assets/images/rts-game.gif" class="d-block mx-lg-auto img-fluid about-pic" alt="Real time strategy game" width="250" loading="lazy">
         </div>
         <div class="col-lg-6">
-          <h3 class="text-body-emphasis 1h-1 mb-3">A Strategy-Game Enthusiast</h3>
+          <h3 class="text-body-emphasis 1h-1 mb-3 py-3">A Strategy-Game Enthusiast</h3>
           <p class="lead">Undoubtedly my most important characteristic! Real-time strategy is my favorite.</p>
         </div>
       </div>
@@ -83,117 +99,109 @@
   </section>
   <!--Skills-->
   <section id="skills">
-    <div class="container px-4 py-5 dm-sans-serif" id="icon-grid">
-      <h2 class="pb-2 border-bottom">Skills</h2>
+    <div class="container px-4 pt-5 dm-sans-serif" id="icon-grid">
+        <h2 class="pb-2 border-bottom mb-3">Skills</h2>
   
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-        <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"></use></svg>
-          <div class="card" style="width: 18rem;">
-            <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Problem Solving</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mt-3">
+            <div class="col d-flex align-items-start my-5">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem Solving</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"></use></svg>
-          <div class="card" style="width: 18rem;">
-            <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Data Manipulation</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col d-flex align-items-start my-5">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Manipulation</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"></use></svg>
-          <div class="card" style="width: 18rem;">
-            <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Database Administration</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col d-flex align-items-start my-5">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Database Administration</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"></use></svg>
-          <div class="card" style="width: 18rem;">
-            <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Embedded Systems</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col d-flex align-items-start my-5">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Embedded Systems</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"></use></svg>
-          <div class="card" style="width: 18rem;">
-            <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Web Development</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col d-flex align-items-start">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Development</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"></use></svg>
-          <div class="card" style="width: 18rem;">
-            <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Leadership</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col d-flex align-items-start">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Leadership</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#geo-fill"></use></svg>
-          <div class="card" style="width: 18rem;">
-            <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Communication</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col d-flex align-items-start">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Communication</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col d-flex align-items-start">
-          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"></use></svg>
-          <div class="card" style="width: 18rem;">
-            <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h3 class="card-title">Critical Thinking</h3>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col d-flex align-items-start">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/images/to-do.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Critical Thinking</h3>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </section> 
+  </section>
   <!--Call to Action-->
-  <div class="p-5 bg-body-tertiary dm-sans-serif">
-    <div class="container px-4" id="featured-3">
-      <h2 class="pb-2 border-bottom">Learn More</h2>
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+  <section id="call-to-action">
+    <div class="container dm-sans-serif py-5" id="featured-3">
+      <h2 class="border-bottom pb-2 mb-3">Learn More</h2>
+      <div class="row py-5 row-cols-1 row-cols-lg-2">
         <div class="feature col">
-          <h3 class="fs-2 text-body-emphasis">Projects</h3>
-          <p>Interested in how I've applied my skills?</p>
+          <h3 class="text-body-emphasis">Projects</h3>
+          <p>Interested in seeing how I've applied my skills?</p>
           <a href="#" class="icon-link">
             View Projects
             <img src="./assets/chevron-right.svg" alt="chevron right" height="12px;">
           </a>
         </div>
         <div class="feature col">
-          <h3 class="fs-2 text-body-emphasis">Get in touch</h3>
-          <p>If you want to play Age of Empires! We could play and code mods together.</p>
+          <h3 class="text-body-emphasis">Get in touch</h3>
+          <p>If you like strategy games too! We could code our own together.</p>
           <a href="#" class="icon-link">
             Contact Me
             <img src="./assets/chevron-right.svg" alt="chevron right" height="12px;">
@@ -201,11 +209,11 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <!--Footer-->
   <section id="footer" class="bg-body-tertiary">
     <div class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center pt-3 py-5 border-top">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center pt-3 py-5">
         <a href="/" class="d-flex flex-column justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
           <span class="fs-4 dm-serif-display-regular">Noah's Nook</span>
           <span class="dm-sans-serif">My own little corner of the internet</span>
