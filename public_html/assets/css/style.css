@@ -25,6 +25,15 @@ body {
     height: auto;
 }
 
+.page-title {
+    background-image: url('../images/waveBackground.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 20%;
+}
+
 .responsive-heading {
     font-size: 4rem; 
 }
@@ -63,6 +72,10 @@ body {
     .responsive-heading {
         font-size: 2rem;
     }
+    .social-media {
+        text-align: center;
+        margin-top: 20px;
+    }
 }
 
 #skills ul li {
@@ -88,13 +101,22 @@ body {
 
 /* Ensures footer sticks to bottom of page as long as main element with class content exists above it*/
 /* Ensure the body and html take up the full height */
+
 html, body {
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
 }
-/* Make the main content grow to push the footer down */
+
 main {
     flex: 1;
+}
+
+form .form-control {
+    padding: 0.75rem 1.25rem;
+}
+
+.btn-dark:hover {
+    background-color: #2b2b2b;
 }
