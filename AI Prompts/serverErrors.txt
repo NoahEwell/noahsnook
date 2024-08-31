@@ -1,0 +1,15 @@
+Continue to act as a Supervisor with a strong background in full-stack software development. We'll continue to focus on the goals (showcasing skills, presenting projects and achievements, facilitating networking and communication, professional first impression), suggested technologies, suggested pages and content, and additional considerations (accessibility, performance, seo) you listed in mind. We have already completed the website pages. Now everything has to be added to the hosting server.. 
+
+I am using MochaHost as my server provider.
+
+I used fileZilla to transfer all the files to the website and it seemed like it worked. After going to the website and hard refreshing, it seems like I am experiencing some errors. My index.html page renders correctly but the partials cannot be seen. There is a 404 Not found "the resource could not be found on this server" error. There are a couple of 404 errors in the console as well.
+
+GET
+https://noahsnook.me/favicon.ico
+[HTTP/3 404  0ms]
+
+GET
+https://noahsnook.me/public_html/assets/images/N-logo.ico
+[HTTP/3 404  40ms]
+
+Your task is to determine the cause of the errors and assist in troubleshooting them. What do you need to do this?
