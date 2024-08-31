@@ -1,8 +1,21 @@
 Act as a Supervisor with a strong background in full-stack software development and hiring candidates with technical backgrounds for the rest of this conversation. You also have strong experience in content writing as well. We'll now focus on each page one at a time with the goals (showcasing skills, presenting projects and achievements, facilitating networking and communication, professional first impression), suggested technologies, suggested pages and content, and additional considerations (accessibility, performance, seo) you listed in mind. We have finished the home page, created the necessary directories, partials, and created main.js. We now need to focus on building the projects page.
 
-Your first task is to ensure that the projects page is correctly rendering the partials, navbar and footer. Explain your process as you complete this first task. After this is completed, add content for the projects page. Since you don't know what projects I have and have not completed, just focus on the layout. Use BootStrap almost entirely for styling. You may use styles.css only when something cannot be done with BootStrap instead. Go through their documentation at: https://getbootstrap.com/docs/5.3/getting-started/introduction/ and look at examples at https://getbootstrap.com/docs/5.3/examples/ to get a good idea of the different ways this page can be styled. Each project should consist of a title, a series of pictures, and a description. BootStrap has components that make this easy. There should be 6 projects. You may use lorem ipsum texts since you do not have inside information about the projects that I have completed.
+Use BootStrap almost entirely for styling. You may use styles.css only when something cannot be done with BootStrap instead. Go through their documentation at: https://getbootstrap.com/docs/5.3/getting-started/introduction/ and look at examples at https://getbootstrap.com/docs/5.3/examples/ to get a good idea of the different ways this page can be styled. Each project should consist of a title, a series of pictures, and a description. BootStrap has components that make this easy. Analyze the existing content of the projects file and continue to use the styling approach that's already being done.
 
-projects.html
+Explain your process as you complete tasks.
+
+Your task is to add 7 more projects to this page so there are a total of 8. I will add the images later. Each project will have 2 images with it. Use lorem ipsum text for the descriptions, but you may name the projects as follows (which is also the order they should go in):
+1) Disney Shortcuts
+2) Monopoly Simulation
+3) Arduino Claw Machine (Fully Controllable)
+4) E-Commerce Shopping Website
+5) Fractal
+6) Permutations Generator
+7) Single-Level Dungeon Crawler
+8) In-Console Hangman
+
+Your output should be the entirety of the projects.html file. All projects and cards should be implemented so there is nothing left to complete. I understand how to add them myself. Your task is to automate the work to save me time. Be sure to return the whole file with all the project cards added and implemented to the fullest extent.
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,68 +26,60 @@ projects.html
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
     <div id="navbar"></div>
 
+    <!-- Main Content -->
+    <main class="content">
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <h1 class="text-center mb-5 responsive-heading serif-heading">My Projects</h1>
+        <div class="container">
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div id="carouselProject1" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="\public_html\assets\images\cm1.png" class="d-block w-100" alt="First time programming the CNC machine to move using Arduino IDE (C++)">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="\public_html\assets\images\cm2.png" class="d-block w-100" alt="Circuitry set-up using an Arduino atmega328p and CNC Shield">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="\public_html\assets\images\cm3.png" class="d-block w-100" alt="The finished claw machine project">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Arduino Claw Machine (Fully Controllable)</h5>
+                            <p class="card-text">For my Computer Architecture class, I built and programmed a fully-controllable Arduino Claw Machine showcasing my ability to quickly learn new skills.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for Projects 2 to 6 -->
+                <!-- Add more project cards here -->
+            </div>
+        </div>
+    </section>
+    </main>
+
     <!-- Footer -->
     <div id="footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script> 
+    <script src="/public_html/assets/js/main.js"></script>
 </body>
 </html>
-
-navbar.html
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a href="/" class="navbar-brand dm-serif-display-regular">
-        <span class="fs-4">Noah's Nook</span>
-        <small class="d-block" style="font-family: 'DM Sans'">My corner of the internet</small>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav text-end">
-            <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="./projects/projects.html">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="./resume/resume.html">Resume</a></li>
-            <li class="nav-item"><a class="nav-link" href="./contact/contact.html">Contact Me</a></li>
-        </ul>
-        </div>
-    </div>
-</nav>
-
-footer.html
-<!-- Footer -->
-<footer id="footer" class="py-4 bg-dark text-white">
-    <div class="container text-center">
-      <p>© 2024 Noah Ewell. All Rights Reserved.</p>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a href="./index.html" class="text-white">Home</a></li>
-        <li class="list-inline-item"><a href="./projects/projects.html" class="text-white">Projects</a></li>
-        <li class="list-inline-item"><a href="./resume/resume.html" class="text-white">Resume</a></li>
-        <li class="list-inline-item"><a href="./contact/contact.html" class="text-white">Contact Me</a></li>
-      </ul>
-    </div>
-</footer>
-
-main.js
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('assets/partials/navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar').innerHTML = data;
-        });
-
-    fetch('assets/partials/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-        });
-});
-
