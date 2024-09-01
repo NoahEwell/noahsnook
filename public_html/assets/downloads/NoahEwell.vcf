@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN;CHARSET=UTF-8:Noah Ewell
+N;CHARSET=UTF-8:Ewell;Noah;;;
+EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:noahewell.life@gmail.com
+TEL;TYPE=CELL:8016412662
+ADR;CHARSET=UTF-8;TYPE=HOME:;;;Salt Lake City;Utah;;
+ROLE;CHARSET=UTF-8:Software Engineer
+URL;CHARSET=UTF-8:https://noahsnook.me
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/noahewell/
+REV:2024-09-01T18:21:08.448Z
+END:VCARD
