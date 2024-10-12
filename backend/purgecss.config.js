@@ -3,15 +3,15 @@ import { PurgeCSS } from "purgecss";
 import CleanCSS from "clean-css";
 import fs from "fs";
 
-// Log the current working directory to verify path resolution
+// Log the current working directory
 console.log('Current working directory:', process.cwd());
 
-// Run PurgeCSS with relative paths for all HTML files in public_html and its subdirectories
+// Run PurgeCSS for all HTML files in public_html and its subdirectories
 const purgeCSSResults = await new PurgeCSS().purge({
   content: [
-    './public_html/*.html',  // Target top-level HTML files (e.g., index.html)
-    './public_html/**/*.html',  // Target second-level HTML files (e.g., resume/resume.html)
-    './public_html/**/**/*.html',  // Target all HTML files in subdirectories and special cases like partials
+    './public_html/*.html',  // Top-level HTML
+    './public_html/**/*.html',  // Subdirectories
+    './public_html/**/**/*.html',  // Deeper subdirectories like partials
   ],
   css: [
     './public_html/assets/css/bootstrap.min.css',  // Bootstrap CSS
@@ -25,14 +25,8 @@ const combinedCSS = purgeCSSResults.map(result => result.css).join("\n");
 // Minify the combined CSS using CleanCSS
 const minifiedCSS = new CleanCSS().minify(combinedCSS).styles;
 
-// Define the correct output path
-const outputDir = "./backend/purged_css";  // Adjusted relative path based on current directory
-const outputFilePath = `${outputDir}/purged.min.css`;  // Save as purged.min.css
-
-// Ensure the output directory exists
-if (!fs.existsSync(outputDir)) {
-  fs.mkdirSync(outputDir, { recursive: true });
-}
+// Define the output path inside `public_html`
+const outputFilePath = "./public_html/assets/css/purged.min.css";
 
 // Write the minified CSS to the output file, overwriting it each time
 fs.writeFileSync(outputFilePath, minifiedCSS, "utf8");
