@@ -12,19 +12,6 @@ body {
     font-family: "DM Sans", system-ui;
 }
 
-#hero {
-    background-image: url('../images/waveBackground.webp'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-}
-
-#hero img {
-    max-width: 150px;
-    height: auto;
-}
-
 .page-title {
     background-image: url('../images/waveBackground.webp'); 
     background-size: cover;
