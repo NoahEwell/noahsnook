@@ -6,10 +6,21 @@
     <title>Noah's Nook</title>
     <link rel="icon" href="/assets/images/N-logo.ico" type="image/ico">
     <meta name="description" content="Welcome to Noah's Nook, the online portfolio of Noah Ewell, a passionate software developer specializing in full-stack web development. Explore my projects, learn about my skills, and get in touch.">
+
+    <!-- Preconnect for faster Google Fonts loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/purged.min.css">
+
+    <!-- Preload critical font for hero section -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap">
+
+    <!-- Load the purged and minified CSS -->
+    <link rel="stylesheet" href="/assets/css/purged.min.css">
+
+    <!-- Preload hero background image to improve LCP -->
+    <link rel="preload" href="/assets/images/waveBackground.webp" as="image">
+
     <style>
       #soft-skills ul {
         display: grid;
@@ -23,11 +34,15 @@
 
     <main class="content">
     <!-- Hero Section -->
-    <section id="hero" class="text-center py-5 bg-dark text-white" style="background-image: url('./images/waveBackground.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; color: white;">
+    <section id="hero" class="text-center py-5 bg-dark text-white" 
+      style="background-image: url('/assets/images/waveBackground.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; color: white;">
       <div class="container">
-        <h1 class="serif-heading responsive-heading">Hi, I'm Noah Ewell</h1>
+        <h1 class="serif-heading responsive-heading" style="font-family: 'DM Serif Display', serif;">Hi, I'm Noah Ewell</h1>
         <p class="lead">A Passionate Software Developer with a Flair for Data Analysis and Machine Learning</p>
-        <img fetchpriority="high" src="/assets/images/portrait.webp" class="rounded-circle mt-4" alt="Noah Ewell" style="width: 150px; height: 150px;" />
+
+        <!-- Load hero image with high priority for LCP -->
+        <img src="/assets/images/portrait.webp" class="rounded-circle mt-4" alt="Noah Ewell" style="width: 150px; height: 150px;" loading="eager" fetchpriority="high" />
+        
         <p class="mt-4">
           I’m a US Citizen and Computer Science Junior at Weber State University with a passion for solving complex problems through code. With a solid foundation in Java and web technologies, I have developed a number of projects that showcase my technical skills. As a continual learner, I am always striving to expand my knowledge and stay at the forefront of technology.
         </p>
@@ -124,7 +139,10 @@
     <!-- Footer -->
     <div id="footer"></div>
 
+    <!-- Load Bootstrap JS if needed -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Local JS deferred -->
     <script src="/assets/js/main.js" defer></script>
   </body>
 </html>
