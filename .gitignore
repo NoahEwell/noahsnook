@@ -1,0 +1,21 @@
+# Node dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Operating system files
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Editor settings
+.vscode/
+.idea/
+
+# Build files (optional, depending on your setup)
+dist/
+build/
