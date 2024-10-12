@@ -13,7 +13,7 @@ body {
 }
 
 #hero {
-    background-image: url('../images/waveBackground.png'); 
+    background-image: url('../images/waveBackground.webp'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
