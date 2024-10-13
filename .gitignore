@@ -1,6 +1,9 @@
 # Node dependencies
 node_modules/
 
+# AI Prompts
+AI_Prompts/
+
 # Environment variables
 .env
 
