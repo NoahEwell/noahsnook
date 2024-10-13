@@ -1,0 +1,39 @@
+noahsnook/
+├── public_html/
+│   ├── assets/
+│   │   ├── css/
+│   │   │   ├── style.css
+│   │   ├── images/
+│   │   ├── js/
+│   │   │   ├── main.js
+│   ├── partials/
+│   │   ├── navbar.html
+│   │   ├── footer.html
+│   ├── projects/
+│   │   ├── index.html
+│   ├── resume/
+│   │   ├── index.html
+│   ├── contact/
+│   │   ├── index.html
+│   ├── index.html
+├── src/
+│   ├── views/
+│   │   ├── index.ejs
+│   │   ├── projects.ejs
+│   │   ├── resume.ejs
+│   │   ├── contact.ejs
+│   │   ├── partials/
+│   │   │   ├── navbar.ejs
+│   │   │   ├── footer.ejs
+│   ├── controllers/
+│   │   ├── contactController.js
+│   ├── models/
+│   │   ├── contactModel.js
+│   ├── routes/
+│   │   ├── index.js
+│   ├── config/
+│   │   ├── db.js
+│   ├── app.js
+├── package.json
+├── .gitignore
+└── README.md
