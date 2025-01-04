@@ -1,0 +1,60 @@
+Acting as a Supervisor with a strong background in full-stack software development, help me create the backend architecture of Noah's Nook. While a lot of Noah's Nook remains static, I would like to create a page that fulfills the following requirements:
+- Gets movies from a mySQL database and displays contents to the user.
+- Users can login and put in new movies or click an 'X' to remove them from the database.
+- Users can click a button to spin a wheel and get a random movie from the database. 
+
+For now, we are just focusing on planning the architecture. I want to organize the file system and decide what is going where, as well as a naming schema. I might add additional database-dependent pages in the future, or even modify current static-only pages to connect to a database. Currently, Noah's Nook looks roughly like this:
+
+noahsnook/
+├── public_html/
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── images/
+│   │   ├── js/
+│   │   ├── downloads/
+│   │   ├── partials/
+│   ├── contact/
+│   │   ├── contact.html
+│   ├── projects/
+│   │   ├── projects.html
+│   ├── resume/
+│   │   ├── resume.html
+│   ├── index.html
+├── backend/
+│   ├── nodemodules/
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── purgecss.config.js
+├── .git
+├── .env
+├── .gitignore
+└── README.md
+
+I'd like to use ejs and nodejs to connect to a MySQL server. I am using MochaHost to currently host my website. I did something similar using PHP once but don't remember it well. For now, how should I organize the file structure? What's the relationship between my ejs files, my static files, and my database? How can I connect to a MySQL database using Node or EJS? What if I wanted to host my website from a personal computer server in the future? Would I use Express for that? And how would MySQL work then? 
+
+
+Prompt 2:
+
+So public_html is where all of my static files go. I notice that partials exists in both backend/views as well as in public_html/assets. What's the reasoning behind this?
+
+Controllers is the folder that handles requests and responses.
+
+Models contains database queries and schemas. All of this can be done in a js file?
+
+Routes defines API endpoints and maps them to controller functions. So like, adding a movie, deleting one, or picking a random movie. 
+
+Config holds configuration files for database connection logic. This happens in a js file and gets info out of .env to do it?
+
+I don't think I'll worry about setting up a local server for now. I'm interested in just getting the code set up and working for my server hosted on MochaHost. I might migrate it later but let's not worry about that yet.
+
+This is all high-level discussion for now. Don't worry about the code yet. Can you give me an example of what the .env file contents would look like?
+
+
+Prompt 3:
+
+Alright. Let's begin to set this up. I would like to get it set up locally using Express, Node, and ejs. I need to have it set up locally before moving it to MochaHost so I can test everything and potentially save a lot of time for myself uploading files each time I make a change. I'm mildly familiar with Node.js and Express.js, but have forgotten a lot of it. I have VSCode terminal open in the noahsnook directory. For now, I would just like to make sure I can get an express server working. How should I go about beginning this project?
+
+
+Prompt 4:
+
+I understand the role of the server.js is to start the server, and handle requests. I was unaware that server.js is where we would connect to the database. Is that normal and correct considering our file structure?
