@@ -57,4 +57,47 @@ Alright. Let's begin to set this up. I would like to get it set up locally using
 
 Prompt 4:
 
-I understand the role of the server.js is to start the server, and handle requests. I was unaware that server.js is where we would connect to the database. Is that normal and correct considering our file structure?
+Continue to act as a full-stack software engineering manager to help guide this project. I understand the role of the server.js is to start the server, and handle requests. I was unaware that server.js is where we would connect to the database. Is that normal and correct considering our file structure? I have shared the file structure again below.
+
+├── backend/                      # Node.js backend
+│   ├── controllers/               # Contains functions to handle requests
+│   │   ├── authController.js       # Login/logout logic
+│   │   ├── movieController.js      # Handles CRUD for movies
+│   ├── models/                     # Database schemas and queries
+│   │   ├── userModel.js
+│   │   ├── movieModel.js
+│   ├── routes/                     # Define the backend API routes
+│   │   ├── authRoutes.js
+│   │   ├── movieRoutes.js
+│   ├── views/                      # EJS files for rendering pages
+│   │   ├── partials/                # Header, footer, etc.
+│   │   ├── index.ejs                # Main page
+│   │   ├── movies.ejs               # Movies page
+│   │   ├── login.ejs                # Login page
+│   ├── config/                      # Configuration files
+│   │   ├── db.js                    # Database connection
+│   │   ├── passport.js              # Optional: handles authentication
+│   ├── server.js                    # Main entry point for the backend
+│   ├── package.json
+│   ├── .env                         # Environment variables for DB connection
+
+I understand how to import the packages as well as create an instance of the express application. Why is it necessary to call .config() on the dotenv package but not the others?
+
+Describe the role of middleware for me. Describe what a view engine does. What does app.set as well as app.use do? I also don't know what path.join or path.resolve means. I am also confused by the different express.static, express.json, and express.urlencoded commands. Explain each please. Please provide links to documentation so I may also review it independently. Also, describe the role of views for me. I've never learned about this before.
+
+So, process.env.DB_HOST is how I would access stuff inside of the .env file? Describe what the .env file would look like.
+
+I do not yet understand routing yet. We'll focus on this in a minute. For now, let's just focus on getting the server to launch.
+
+After you're finished explaining, share the modified example of server.js as well as what commands should be run to get the server to launch.
+
+
+Prompt 5:
+
+I understand that dotenv.config() is called to load env variables (such as database information). 
+
+Middleware I am still shakey on but am confident I will understand after further examples.
+
+I see. So ejs is considered a "view engine". I understand ejs's role as a templating language but had never heard of the term view engine before.
+
+I understand all ejs files go into views now. I understand what 
