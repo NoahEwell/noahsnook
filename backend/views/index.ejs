@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noah's Nook</title>
+    <link rel="icon" href="/assets/images/N-logo.ico" type="image/ico">
+    <meta name="description" content="Welcome to Noah's Nook, the online portfolio of Noah Ewell, a passionate software developer specializing in full-stack software engineering. Explore my projects, learn about my skills, and get in touch.">
+
+    <!-- Preconnect for faster Google Fonts loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload critical font for hero section -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap">
+
+    <!-- Load the purged and minified CSS -->
+    <link rel="stylesheet" href="/assets/css/purged.min.css">
+
+    <!-- Preload hero background image to improve LCP -->
+    <link rel="preload" href="/assets/images/waveBackground.webp" as="image">
+
+    <style>
+      #soft-skills ul {
+        display: grid;
+        grid-row-gap: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <%- include('partials/navbar') %>
+
+    <main class="content">
+    <!-- Hero Section -->
+    <section id="hero" class="text-center py-5 bg-dark text-white" 
+      style="background-image: url('/assets/images/waveBackground.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; color: white;">
+      <div class="container">
+        <h1 class="serif-heading responsive-heading" style="font-family: 'DM Serif Display', serif;">Hi, I'm Noah Ewell</h1>
+        <p class="lead">A Passionate Software Engineer with a Flair for Mobile Development and Machine Learning</p>
+
+        <!-- Load hero image with high priority for LCP -->
+        <img src="/assets/images/portrait.webp" class="rounded-circle mt-4" alt="Noah Ewell" style="width: 150px; height: 150px;" loading="eager" fetchpriority="high" />
+        
+        <p class="mt-4">
+          I’m a US Citizen and Computer Science Junior at Weber State University with a passion for solving complex problems through code. With a solid foundation in Java and web technologies, I have developed a number of projects that showcase my technical skills. As a continual learner, I am always striving to expand my knowledge and stay at the forefront of technology.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Summary -->
+    <section id="skills" class="py-5">
+      <div class="container text-center">
+        <h2 class=" mb-4">Skills at a Glance</h2>
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            <h3>Technical Skills</h3>
+            <strong>Languages:</strong><br>
+            Java, JavaScript, HTML5, CSS3, SQL, PHP<br>
+            <strong>Databases:</strong><br>
+            MySQL<br>
+            <strong>Frameworks:</strong><br>
+            Node.js, Express.js, Bootstrap, JQuery<br>
+            <strong>Tools:</strong><br>
+            Git, GitHub, Xampp, FileZilla, VS Code, Eclipse<br>
+            <strong>Methodologies:</strong><br>
+            SCRUM, Agile, SaaS<br>
+          </div>
+          <div class="col-md-6">
+            <h3>Soft Skills</h3>
+            <div class="row" id="soft-skills">
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li>Leadership</li>
+                  <li>Communication</li>
+                  <li>Problem-Solving</li>
+                  <li>Self-Motivation</li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li>Teamwork</li>
+                  <li>Adaptability</li>
+                  <li>Critical Thinking</li>
+                  <li>Resiliance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <p class="fst-italic">"Failure will never overtake me if my determination to succeed is strong enough"<br>- Og Mandino</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section id="highlights" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4">Featured Work and Achievements</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Projects</h3>
+            <p>Take a look at my work to see how I've demonstrated my skills. Explore what I’ve been building and how I can help you.</p>
+            <a href="/projects/projects.html" id="projectsBtn" class="btn btn-dark mb-4">Explore My Projects</a>
+          </div>        
+          <div class="col-md-6">
+            <div class="testimonial p-4 bg-white border rounded container">
+              <p class="mb-0"><em>"Noah has been an outstanding student in my CS-2 Algorithms and Data Structures class, quickly grasping and applying new concepts with ease in his coding projects . . . His Professionalism, tenacity, and results-driven approach make him a valuable addition and a strong contributor to any team or project." (October, 2024).</em></p>
+              <div class="row">
+                <div class="col-lg-7">
+                  <p class="mt-3"><strong>- Margarethe Posch; Professor, CS Department Coordinator at Salt Lake Community College.</strong></p>
+                </div>
+                <div class="col-lg-5 ">
+                  <p class="mt-3 text-lg-end"><a href="https://www.linkedin.com/in/noahewell/">See Recommendation</a><br>(Takes you to LinkedIn)</p>  
+                </div>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="cta" class="py-5 text-center text-white">
+      <div class="container">
+        <h2 class="fw-bold">Get in Touch</h2>
+        <p class="lead">Whether you’re interested in my work or just want to chat about the latest in tech, I’d love to hear from you.</p>
+        <a href="/contact/contact.html" class="btn btn-dark btn-lg">Contact Me</a>
+        <div class="social-media mt-4">
+          <a href="https://github.com/NoahEwell" class="text-white me-3"><i class="bi bi-github"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/noahewell/" class="text-white"><i class="bi bi-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+
+    <!-- Load Bootstrap JS if needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Local JS deferred -->
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+</html>

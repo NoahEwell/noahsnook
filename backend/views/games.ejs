@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostalgic Games</title>
+    <meta name="description" content="List of nostalgic games Noah Ewell used to play online">
+    <link rel="icon" href="/assets/images/N-logo.ico" type="image/ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <%- include('partials/navbar') %>
+
+    <!-- Main Content -->
+    <main class="content">
+    <!-- Online Games -->
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="serif-heading responsive-heading">Noah's Childhood Games</h1>
+                <p>Nostalgic games from my childhood. Mostly games available online from websites like Armor games or Kongregate, although there are a couple that were downloadable applications only.</p>
+            </div>
+        </div>
+        <div class="album py-5 bg-body-tertiary">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3320/header.jpg?t=1615205929" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://store.steampowered.com/app/3320/Insaniquarium_Deluxe/">Insaniquarium Deluxe</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Feed fish, collect coins, get better fish! Defeat Aliens! It's a vibe. Available on Steam.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/PocketTanks.jpg" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://classic.blitwise.com/ptanksdeluxe.html">Pocket Tanks</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Play with friends, fight tanks! Available as a downloadable application.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDgvvTa2IFtuZx07S7OPGH2EqPahcj1zw5kQ&s" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://www.kongregate.com/games/GregoryWeir/how-to-raise-a-dragon">How to Raise a Dragon</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Locked up by a wizard as a baby dragon, pick an element and grow to adulthood to take revenge!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="data:image/jpeg;base64,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" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://armorgames.com/play/279/territory-war">Territory War</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Control stick-figures and fight bots or eachother to gain territory! This is the game that taught me how to spell territory!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://play-lh.googleusercontent.com/85VAzGL-C9Bp0RcmBS-JpJaNLgh-_dPdC5-PVpvZoK7dodnqaCQD5oNCNzGuMSXiQA=w526-h296-rw" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://ageofwargame.io/">Age of War I (or II)</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">The first 2D RTS game I played! Advance through the ages and defeat the enemy!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/7/74/Dino_Run_title_screen.webp" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://poki.com/en/g/dino-run">Dino Run</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Run to score points, find eggs, hats and escape extinction! Outrun the darkness!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="data:image/jpeg;base64,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" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://www.crazygames.com/game/fancy-pants-adventure-world">Fancy Pants Adventures</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Slide through the levels with the fanciest of pants on!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple127/v4/a7/35/4b/a7354b9e-6677-6886-78fa-e45fafd2046f/pr_source.png/643x0w.jpg" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://www.kongregate.com/games/armorgames/crush-the-castle">Crush the Castle I (or II)</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Take revenge on the kingdom after being refused by the King for something (I don't remember what, lol)! But CRUSH THOSE CASTLES!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://i.kinja-img.com/image/upload/c_fit,q_60,w_645/9c618678c216a654240c6c24b77117ec.jpg" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://www.crazygames.com/game/interactive-buddy">Interactive Buddy</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Oh, the poor little guy. We had some great times though, didn't we?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://images.crazygames.com/games/shopping-cart-hero/cover-1637397325141.png?auto=format,compress&q=75&cs=strip" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://www.addictinggames.com/action/shopping-cart-hero">Shopping Cart Hero I (or II, or III, or didn't they make 4 of these?)</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">An adrenaline junkie, shopping cart obsessor, and... a father? Ride those shopping carts at all costs!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://i.ytimg.com/vi/DleeTJfJIb8/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYACpAWKAgwIABABGH8gHigVMA8=&rs=AOn4CLBc0-tAuggR3aewZ0MIeGvV7HP2hw" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://www.kongregate.com/games/nobstudio/monster-evolution">Monster Evolution</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Eat people and avoid the popo to evolve into an even bigger and badder monster!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://www.coolmathgames.com/sites/default/files/raft-wars.png" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://poki.com/en/g/raft-wars">Raft Wars</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Babies, pirates, guns, and treasure! What more could you ask for in a game?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://images.crazygames.com/games/sydney-shark/cover-1614246104536.png?auto=format%2Ccompress&q=45&cs=strip&ch=DPR&w=1200&h=630&fit=crop" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://www.crazygames.com/game/sydney-shark">Sydney Shark</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Remember the typing class they made me take because I was absent on the day to test out? I'd finish my assignments in 5 minutes and play this the rest of the time! What a blast!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/270630/header.jpg?t=1701201812" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://hauntthehouse.io/">Haunt the House I (or II)</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Possess objects and haunt the residents! Don't go overboard or they won't be scared anymore!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://ia801509.us.archive.org/33/items/staggy-the-boy-scout-slayer-flash-game-series/stag1-gameplay1.png" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://kbhgames.com/game/staggy-the-boy-scout-slayer-ii">Staggy the Boy Scout Slayer I (or II)</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Boy Scouts? In MY forest?! I don't think so!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://media.wired.com/photos/5a3d9b18dab97f2b797c4767/4:3/w_660,h_495,c_limit/bg_bubble_tanks2.jpg" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://armorgames.com/play/1920/bubble-tanks-2">Bubble Tanks I (or II, or III)</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Murder other bubbles to make make your bubble tank bigger and better! Become the best bubble tank!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO0h89Cd4DEPAtCa3WIwwOtcUbgdNMkYPpJg&s" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://flashmuseum.org/bunni-how-we-first-met/">Bunni How we first met</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Be the king of bunni island! Unlock new islands, bunni helpers! And... I really don't remember what the overall goal was but I remember having fun!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://static01.nyt.com/images/2008/09/05/arts/05spore-600.jpg?year=2008&h=330&w=600&s=09927b241fef05fda31204e4fc0d48d188c3f037f0bbbf2501021e37435e80ae&k=ZQJBKqZ0VN&tw=1" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://store.steampowered.com/app/17390/SPORE/">SPORE</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Starting from humble beginnings, eat or befriend other species, and emerge as the dominant species on your planet!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://img.gamepix.com/games/kitten-cannon/cover/kitten-cannon.png?w=400&ar=16:10" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://www.addictinggames.com/funny/kitten-cannon">Kitten Cannon</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Upgrade your cannon to launch your kitten farther each time!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://images.crazygames.com/games/toss-the-turtle/cover-1635771332448.png?auto=format%2Ccompress&q=45&cs=strip&ch=DPR&w=1200&h=630&fit=crop" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://images.crazygames.com/games/toss-the-turtle/cover-1635771332448.png?auto=format%2Ccompress&q=45&cs=strip&ch=DPR&w=1200&h=630&fit=crop">Toss the Turtle I (or II)</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Launch the turtle from a cannon! Navigate towards bombs to go even farther! (Disclaimer: Not recommended for turtle-lovers)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://img.utdstc.com/screen/c1f/f7c/c1ff7c46d12a47249e465064cfee2a3fdbb0178d182179a58afcd99d26927eb8:600" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://www.crazygames.com/game/stick-war">Stick War</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Another RTS where you fight stick people and upgrade them! I remember not being very good but it was fun!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://www.pacxon.net/artwork/pacxon1.jpg" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://www.pacxon.net/">Pacxon</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Use Pacman to make the area smaller and trap the ghosts!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/games/switch/p/pajama-sam-no-need-to-hide-when-its-dark-outside-switch/hero" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://store.steampowered.com/app/283960/Pajama_Sam_No_Need_to_Hide_When_Its_Dark_Outside/">Pajama Sam</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">DI remember spending a LOT of time eating candy in the first room at the party lol -- it looked good!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://www.usatoday.com/gcdn/-mm-/ca115edcb64d3cb30bc6009b3eda7e540abeebd7/c=0-189-2048-1346/local/-/media/2015/08/05/USATODAY/USATODAY/635743901251092865-PizzaPass.PNG?width=2048&height=1157&fit=crop&format=pjpg&auto=webp" alt="Image of Gameplay" width="100%" height="225" preserveAspectRatio="xMidYMid slice">
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    <a href="https://store.steampowered.com/app/397430/Zoombinis/">Zoombinis</a>
+                                </text>
+                            </img>
+                            <div class="card-body">
+                            <p class="card-text">Solve puzzles to sacrifice the least number of Zoombinis on a perilous journey to somewhere else! The funnest part was designing them in the beginning :)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+
+    <!-- Load Bootstrap JS if needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Local JS deferred -->
+    <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

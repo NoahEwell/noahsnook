@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah's Resume</title>
+    <meta name="description" content="View Noah Ewell's professional resume, highlighting skills, experience, and education in software development. Learn how I can contribute to your organization's success.">
+    <link rel="icon" href="/assets/images/N-logo.ico" type="image/ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/purged.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <%- include('partials/navbar') %>
+
+    <!-- Main Content -->
+    <main class="content">
+    <!--Resume Content-->
+    <section id="resume" class="container py-5">
+      <h1 class="serif-heading responsive-heading text-center">My Resume</h1>
+      <div class="text-center">
+        <p>
+          On mobile? Your web browser may not have a PDF plugin.
+          Instead you can <a href="/assets/images/resume-noahewell.pdf">click here to
+          download my Resume.</a>
+        </p>
+    </div>
+      <div class="d-flex justify-content-center py-3">
+        <!-- <embed src="/assets/images/resume-noahewell.pdf" width="850" height="1100"/><br/> -->
+        <object data="/assets/images/resume-noahewell.pdf" type="application/pdf" width="850px" height="1100px"></object>
+      </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
