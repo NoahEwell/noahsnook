@@ -1,0 +1,25 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Ensure the proxy module is enabled
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Prevent rewrites for static files (like CSS, JS, images)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Forward all requests to the Node.js app on localhost:4000
+RewriteRule ^ http://127.0.0.1:4000%{REQUEST_URI} [P,L]
+
+# Prevent rewriting requests to the node app itself (safety)
+RewriteCond %{HTTP_HOST} ^localhost:4000$ [NC]
+RewriteRule .* - [L]
+
+# Ensure that HTTPS is forced for security
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Custom Error Handling (forwarding to your Node app)
+ErrorDocument 404 /custom-error-404
+ErrorDocument 500 /custom-error-500
