@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QR Code Generator</title>
+  <meta name="description" content="QR Code Generator" />
+  <link rel="icon" href="/assets/images/N-logo.ico" type="image/ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/purged.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <%- include('partials/navbar') %>
+
+  <main class="content">
+    <section id="qr" class="container py-5">
+      <h1 class="serif-heading responsive-heading text-center">QR Generator</h1>
+      <div class="text-center">
+        <p>Enter a URL and hit "Create" to generate a free QR Code.</p>
+      </div>
+
+      <div class="d-flex justify-content-center py-3">
+        <!-- Form that posts to /generate-qr -->
+        <form action="/generate-qr" method="POST">
+          <input 
+            type="text" 
+            name="url" 
+            placeholder="https://noahsnook.me" 
+            required
+            style="width: 300px; margin-right: 10px;"
+          />
+          <button type="submit">Create</button>
+        </form>
+      </div>
+
+      <!-- If a QR code was generated, show it -->
+      <% if (qrCode) { %>
+        <div class="text-center" style="margin-top: 20px;">
+          <img src="<%= qrCode %>" alt="Generated QR Code" width="30%" />
+            <p>   
+                Your URL: <%= urlText %><br>
+            </p>
+            </p>
+                Disclaimer: <br>
+                No information or generated QRs are saved.<br>
+                By using this tool, you agree not to use it to violate any laws and you understand and agree that Noah Ewell is not liable for any malfeasance.
+            </p>
+        </div>
+      <% } %>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <%- include('partials/footer') %>
+
+  <!-- Your scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -3,10 +3,12 @@
     <div class="container text-center">
       <p>© <%= year %> Noah Ewell. All Rights Reserved.</p>
       <ul class="list-inline">
-        <li class="list-inline-item"><a href="/" class="text-white">Home</a></li>
-        <li class="list-inline-item"><a href="/projects" class="text-white">Projects</a></li>
-        <li class="list-inline-item"><a href="/resume" class="text-white">Resume</a></li>
-        <li class="list-inline-item"><a href="/contact" class="text-white">Contact Me</a></li>
+        <li class="list-inline-item"><a class="text-white <%= currentPath === '/' ? 'active' : '' %>" href="/">Home</a></li>
+        <li class="list-inline-item"><a class="text-white <%= currentPath === '/projects' ? 'active' : '' %>" href="/projects">Projects</a></li>
+        <li class="list-inline-item"><a class="text-white <%= currentPath === '/resume' ? 'active' : '' %>" href="/resume">Resume</a></li>
+        <li class="list-inline-item"><a class="text-white <%= currentPath === '/contact' ? 'active' : '' %>" href="/contact">Contact Me</a></li>
+        <li class="list-inline-item"><a class="text-white <%= currentPath === '/qr' ? 'active' : '' %>" href="/qr">QR</a></li>
+        <li class="list-inline-item"><a class="text-white <%= currentPath === '/games' ? 'active' : '' %>" href="/games">Games</a></li>       
       </ul>
     </div>
 </footer>
