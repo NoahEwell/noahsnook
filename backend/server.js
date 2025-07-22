@@ -35,6 +35,7 @@ app.get('/games', (req, res) => res.render('games', { currentPath: req.url }));
 app.get('/books', (req, res) => res.render('books', { currentPath: req.url }));
 app.get('/qr', (req, res) => {
     // When user visits /qr (GET), we just show the page without a QR yet
+    console.log('Reached the /qr route');
     res.render('qr', { 
         currentPath: req.url,
         qrCode: null,

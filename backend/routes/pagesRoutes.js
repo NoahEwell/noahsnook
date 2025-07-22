@@ -21,4 +21,9 @@ router.get('/contact', (req, res) => {
     res.render('contact');  // Renders the `contact.ejs` file
 });
 
+// Qr route
+router.get('/qr', (req, res) => {
+    res.render('qr');  // Renders the `qr.ejs` file
+});
+
 export default router;

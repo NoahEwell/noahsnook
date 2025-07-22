@@ -101,3 +101,49 @@ Middleware I am still shakey on but am confident I will understand after further
 I see. So ejs is considered a "view engine". I understand ejs's role as a templating language but had never heard of the term view engine before.
 
 I understand all ejs files go into views now. I understand what 
+
+
+Prompt 6:
+
+Right now, https://noahsnook.me navigates to my static index.html file in public_html through mochahost. Let's forget about the movie project for a while. The first thing I'd like to do is get my partials to populate on all of my ejs pages. Currently my directory for static pages is something like:
+
+noahsnook/
+├── public_html/
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── images/
+│   │   ├── js/
+│   │   │   ├── bootstrap.min.js
+│   │   │   ├── main.js
+│   │   ├── downloads/
+│   │   ├── partials/
+│   │   │   ├── footer.html
+│   │   │   ├── navbar.html
+│   ├── contact/
+│   │   ├── contact.html
+│   ├── projects/
+│   │   ├── projects.html
+│   ├── resume/
+│   │   ├── resume.html
+│   ├── index.html
+├── backend/
+
+I've been using the following code in main.js to load in my partials to each page:
+/**
+ * Load in partials footer and navbar
+ */
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('/assets/partials/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+
+    fetch('/assets/partials/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+});
+
+Is there a better way of doing this now that I am building out the backend? How should I migrate my files? What will the new file structure look like if you're proposing changes? I didn't record the entirety file structure of noahsnook but the backend also has config, controllers, models, routes, and views folders -- all of which are currently empty.
